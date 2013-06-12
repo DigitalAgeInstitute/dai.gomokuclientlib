@@ -1,5 +1,5 @@
 /**
- * This package is to hold various other packages and classes wherein various clients are implemented.
+ * This package holds the main classes and interfaces that relate generically to the clients
  * 
  * @author Muriithi Frederick Muriuki
  *

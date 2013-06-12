@@ -21,6 +21,13 @@ public class GameModel {
 
 	private String winner;
 
+	/**
+	 * The constructor
+	 * 
+	 * @param gameID The id for this game model, that relates it to the game on the server
+	 * @param playerO The username for the player playing as O
+	 * @param playerX The username for the player playing as X
+	 */
 	public GameModel(String gameID, String playerO, String playerX) {
 		this.gameID = gameID;
 		this.playerO = playerO;
@@ -64,16 +71,33 @@ public class GameModel {
 		return BOARD_SIZE;
 	}
 
+	/**
+	 * Registers a listener for changes in this model
+	 * 
+	 * @param listener An object implementing the {@link GameBoardChangeListener} interface
+	 */
 	public void addGameBoardChangeListener(GameBoardChangeListener listener) {
 		gameBoardChangeListeners.add(listener);
 	}
 
+	/**
+	 * Deregisters a listener for changes in this model
+	 * 
+	 * @param listener An object implementing the {@link GameBoardChangeListener} interface
+	 */
 	public void removeGameBoardChangeListener(GameBoardChangeListener listener) {
 		if (gameBoardChangeListeners.contains(listener)) {
 			gameBoardChangeListeners.remove(listener);
 		}
 	}
 
+	/**
+	 * Updates the model by marking the cell with either an X or an O
+	 * 
+	 * @param row The row of the cell to update
+	 * @param col The column of the cell to update
+	 * @param username The user who made the change
+	 */
 	public void markCell(int row, int col, String username) {
 		if (username.equals(playerO)) {
 			gameBoard[row][col] = 'O';

@@ -8,6 +8,13 @@ import javax.swing.JOptionPane;
 
 import dai.gomoku.client.swing.requests.MakeMoveRequest;
 
+/**
+ * This class abstracts a board cell. It was created to provide a means to refer
+ * to each cell within the board
+ * 
+ * @author Muriithi Frederick Muriuki
+ * 
+ */
 public class BoardCell extends JButton implements ActionListener {
 	/**
 	 * 
@@ -20,6 +27,13 @@ public class BoardCell extends JButton implements ActionListener {
 
 	private ClientController controller;
 
+	/**
+	 * The constructor
+	 * 
+	 * @param controller An object of a class implementing the {@link ClientController} interface
+	 * @param row The cell's row
+	 * @param col The cell's column
+	 */
 	public BoardCell(ClientController controller, int row, int col) {
 		this.controller = controller;
 		this.row = row;
@@ -73,7 +87,7 @@ public class BoardCell extends JButton implements ActionListener {
 	}
 
 	/**
-	 * @return the gameModel
+	 * @return the {@link GameModel} object
 	 */
 	public GameModel getGameModel() {
 		return gameModel;
@@ -90,15 +104,15 @@ public class BoardCell extends JButton implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (owner == null) {
-			if ( gameModel.isGameOver() ) {
+			if (gameModel.isGameOver()) {
 				controller.displayGameOverMessage(gameModel.getWinner());
 			} else {
-			MakeMoveRequest mm = new MakeMoveRequest(controller);
-			mm.setGameID(gameModel.getGameID());
-			mm.setRow(row);
-			mm.setCol(col);
-			mm.setUsername(controller.getUsername());
-			mm.request();
+				MakeMoveRequest mm = new MakeMoveRequest(controller);
+				mm.setGameID(gameModel.getGameID());
+				mm.setRow(row);
+				mm.setCol(col);
+				mm.setUsername(controller.getUsername());
+				mm.request();
 			}
 		} else {
 			JOptionPane.showMessageDialog(this.getParent(),
