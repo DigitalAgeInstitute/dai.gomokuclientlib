@@ -7,6 +7,11 @@ import com.google.gson.annotations.SerializedName;
 import dai.gomoku.client.Player;
 
 public class ResponseWrapper {
+	
+	public ResponseWrapper() {
+		
+	}
+	
 	@SerializedName("type")
 	private String type;
 
