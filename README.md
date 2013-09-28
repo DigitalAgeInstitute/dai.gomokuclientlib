@@ -12,7 +12,7 @@ The first step, is to give you a lay of the land. We shall talk about what is ne
 
 In order to get the library, there are a couple of ways to go about it:
 
-<strong>Binaries</strong> - For those of you who wish to just get going without mucking around too much, [here]() is the link to download the zipped library and it's javadoc
+<strong>Binaries</strong> - For those of you who wish to just get going without mucking around too much, [here](https://github.com/DigitalAgeInstitute/dai.gomokuclientlib/tree/master/dist) is the link to download the zipped library and it's javadoc or simply the library with no javadoc (for those who are already farmiliar with the library, or wish to generate the javadoc from source)
 
 <strong>Sources</strong> - For those interested in the source code, you could get the zipped version [here](https://github.com/DigitalAgeInstitute/dai.gomokuclientlib/archive/master.zip) or you could fork/clone the repository into some working directory by running the command:
 
