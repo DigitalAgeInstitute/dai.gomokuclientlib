@@ -31,3 +31,10 @@ With just this interface, you can get going, implementing your client without ne
 ###Dependencies
 
 As of this point, this library is dependent on the gson library, specifically version 2.2.3 which you can get [here](https://code.google.com/p/google-gson/downloads/list). As we go along, we shall look into eliminating that dependecy and making the library as light as can be.
+
+##Developer Notes
+
+This section list ways the library can be improved.
+
+- Reimplement the protocol to make use of simple text (eliminate json, hence gson dependecy)
+
